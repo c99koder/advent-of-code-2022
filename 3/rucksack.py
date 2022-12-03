@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
 
+from colorama import Fore, Style
+
+HORIZONTAL = u'\u2500'
+VERTICAL = u'\u2502'
+TOP_LEFT_CORNER = u'\u250c'
+TOP_RIGHT_CORNER = u'\u2510'
+BOTTOM_LEFT_CORNER = u'\u2514'
+BOTTOM_RIGHT_CORNER = u'\u2518'
+TOP_MIDDLE = u'\u252c'
+BOTTOM_MIDDLE = u'\u2534'
+
 part1_sum = 0
 part2_sum = 0
+group_count = 0
 
 def priority(item):
     if item >= 'a' and item <= 'z':
@@ -19,11 +31,11 @@ def part1(rucksack):
             types.add(type)
         elif type in types:
             part1_sum += priority(type)
-            break
+            return type
         count += 1
 
 def part2(group):
-    global part2_sum
+    global part2_sum, group_count
     types = {}
     count = 0
     for items in group:
@@ -34,9 +46,51 @@ def part2(group):
                 types[type] = {count}
         count += 1
 
+    badge = None
+
     for type, rucksacks in types.items():
         if len(rucksacks) == 3:
+            badge = type
             part2_sum += priority(type)
+
+    group_count += 1
+
+    print(f'Group #{Fore.WHITE}{group_count}{Style.RESET_ALL}')
+
+    for rucksack in group:
+        print_rucksack(rucksack, part1(rucksack), badge)
+
+def print_rucksack(rucksack, error, badge):
+    items = list(rucksack)
+    print(f'{Fore.YELLOW}{TOP_LEFT_CORNER}', end='')
+    for i in range(0,int(len(rucksack) / 2)):
+        print(HORIZONTAL, end='')
+    print(TOP_MIDDLE, end='')
+    for i in range(0,int(len(rucksack) / 2)):
+        print(HORIZONTAL, end='')
+    print(TOP_RIGHT_CORNER)
+
+    print(f'{VERTICAL}{Style.RESET_ALL}', end='')
+    count = 0
+    for item in items:
+        if item == error:
+            print(f'{Fore.RED}{item}{Style.RESET_ALL}', end='')
+        elif item == badge:
+            print(f'{Fore.GREEN}{item}{Style.RESET_ALL}', end='')
+        else:
+            print(item, end='')
+        count += 1
+        if count == int(len(items) / 2):
+            print(f'{Fore.YELLOW}{VERTICAL}{Style.RESET_ALL}', end='')
+    print(f'{Fore.YELLOW}{VERTICAL}')
+
+    print(BOTTOM_LEFT_CORNER, end='')
+    for i in range(0,int(len(rucksack) / 2)):
+        print(HORIZONTAL, end='')
+    print(BOTTOM_MIDDLE, end='')
+    for i in range(0,int(len(rucksack) / 2)):
+        print(HORIZONTAL, end='')
+    print(f'{BOTTOM_RIGHT_CORNER}{Style.RESET_ALL}')
 
 print('--- Day 3: Rucksack Reorganization ---')
 group = []
@@ -48,4 +102,4 @@ for line in open('input.txt', 'r').readlines():
         part2(group)
         group.clear()
 
-print(f'Sums:\tPart 1: {part1_sum}\tPart 2: {part2_sum}')
+print(f'{Fore.CYAN}Sums:{Style.RESET_ALL}\tPart 1: {Style.BRIGHT}{part1_sum}{Style.RESET_ALL}\tPart 2: {Style.BRIGHT}{part2_sum}{Style.RESET_ALL}')
