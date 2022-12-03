@@ -1,4 +1,6 @@
-import sys, operator
+#!/usr/bin/env python3
+
+import operator
 
 currentElf = 0
 currentTotal = 0

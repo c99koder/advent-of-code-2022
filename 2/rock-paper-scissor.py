@@ -1,4 +1,4 @@
-import sys
+#!/usr/bin/env python3
 
 GUIDE = {'A': 'rock', 'B': 'paper', 'C': 'scissors', 'X': 'rock', 'Y': 'paper', 'Z': 'scissors'}
 SCORES = {'rock': 1, 'paper': 2, 'scissors': 3}
