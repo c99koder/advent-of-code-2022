@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 
+import sys
 from colorama import Fore, Style
-
-HORIZONTAL = u'\u2500'
-VERTICAL = u'\u2502'
-TOP_LEFT_CORNER = u'\u250c'
-TOP_RIGHT_CORNER = u'\u2510'
-BOTTOM_LEFT_CORNER = u'\u2514'
-BOTTOM_RIGHT_CORNER = u'\u2518'
-TOP_MIDDLE = u'\u252c'
-BOTTOM_MIDDLE = u'\u2534'
+sys.path.append("../")
+from utils import *
 
 part1_sum = 0
 part2_sum = 0
@@ -63,11 +57,9 @@ def part2(group):
 def print_rucksack(rucksack, error, badge):
     items = list(rucksack)
     print(f'{Fore.YELLOW}{TOP_LEFT_CORNER}', end='')
-    for i in range(0,int(len(rucksack) / 2)):
-        print(HORIZONTAL, end='')
+    draw_line(int(len(rucksack) / 2))
     print(TOP_MIDDLE, end='')
-    for i in range(0,int(len(rucksack) / 2)):
-        print(HORIZONTAL, end='')
+    draw_line(int(len(rucksack) / 2))
     print(TOP_RIGHT_CORNER)
 
     print(f'{VERTICAL}{Style.RESET_ALL}', end='')
@@ -85,11 +77,9 @@ def print_rucksack(rucksack, error, badge):
     print(f'{Fore.YELLOW}{VERTICAL}')
 
     print(BOTTOM_LEFT_CORNER, end='')
-    for i in range(0,int(len(rucksack) / 2)):
-        print(HORIZONTAL, end='')
+    draw_line(int(len(rucksack) / 2))
     print(BOTTOM_MIDDLE, end='')
-    for i in range(0,int(len(rucksack) / 2)):
-        print(HORIZONTAL, end='')
+    draw_line(int(len(rucksack) / 2))
     print(f'{BOTTOM_RIGHT_CORNER}{Style.RESET_ALL}')
 
 print('--- Day 3: Rucksack Reorganization ---')
