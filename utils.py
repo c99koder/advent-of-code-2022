@@ -11,6 +11,8 @@ BOTTOM_MIDDLE = u'\u2534'
 LEFT_MIDDLE = u'\u251c'
 RIGHT_MIDDLE = u'\u2524'
 MIDDLE = u'\u253c'
+BLOCK = u'\u2588'
+SQUARE = u'\u25aa'
 
 def draw_line(length):
     print(HORIZONTAL*length, end='')
