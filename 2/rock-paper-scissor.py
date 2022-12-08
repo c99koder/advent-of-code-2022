@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import sys
-from itertools import repeat
 from colorama import Fore, Style
 sys.path.append("../")
 from utils import *
