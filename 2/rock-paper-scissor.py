@@ -72,6 +72,7 @@ def part2(opponent, outcome):
 
     print(out)
 
+window_title('Day 2: Rock Paper Scissors')
 print('--- Day 2: Rock Paper Scissors ---')
 
 print(f'{Fore.YELLOW}{TOP_LEFT_CORNER}', end='')

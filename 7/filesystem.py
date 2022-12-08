@@ -57,6 +57,7 @@ def dir_size(dir: dict):
 
     return size
 
+window_title('Day 7: No Space Left On Device')
 print('--- Day 7: No Space Left On Device ---')
 
 for line in open('input.txt', 'r').readlines():

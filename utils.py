@@ -14,10 +14,13 @@ MIDDLE = u'\u253c'
 BLOCK = u'\u2588'
 SQUARE = u'\u25aa'
 
-def draw_line(length):
+def draw_line(length: int):
     print(HORIZONTAL*length, end='')
 
-def strip(string):
+def window_title(title: str):
+    print(f'\033]0;{title}\007')
+
+def strip(string: str):
     for key in Style.__dict__.keys():
         string = string.replace(Style.__dict__[key], '')
     for key in Fore.__dict__.keys():

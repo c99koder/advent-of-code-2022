@@ -10,6 +10,7 @@ currentTotal = 0
 
 totals = []
 
+window_title('Day 1: Calorie Counting')
 print('--- Day 1: Calorie Counting ---')
 for line in open('input.txt', 'r').readlines():
     line=line.rstrip()

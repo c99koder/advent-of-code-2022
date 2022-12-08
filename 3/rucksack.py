@@ -82,6 +82,7 @@ def print_rucksack(rucksack, error, badge):
     draw_line(int(len(rucksack) / 2))
     print(f'{BOTTOM_RIGHT_CORNER}{Style.RESET_ALL}')
 
+window_title('Day 3: Rucksack Reorganization')
 print('--- Day 3: Rucksack Reorganization ---')
 group = []
 for line in open('input.txt', 'r').readlines():

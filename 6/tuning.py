@@ -18,7 +18,9 @@ def find_marker(line, length):
             return(offset + 1)
 
     return -1
-    
+
+window_title('Day 6: Tuning Trouble')
+print('--- Day 6: Tuning Trouble ---')
 line = open('input.txt', 'r').readlines()[0]
 
 packet_offset = find_marker(line, 4)

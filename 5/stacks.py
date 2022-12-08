@@ -45,6 +45,7 @@ def draw_stacks(stacks):
             print(f'[{box}]', end='')
         print(f'{Fore.GREEN}[{stacks[stack][len(stacks[stack])-1]}]{Style.RESET_ALL}')
 
+window_title('Day 5: Supply Stacks')
 print('--- Day 5: Supply Stacks ---')
 
 for line in open('input.txt', 'r').readlines():
