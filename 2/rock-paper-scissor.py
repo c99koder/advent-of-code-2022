@@ -8,7 +8,7 @@ GUIDE = {'A': 'rock', 'B': 'paper', 'C': 'scissors', 'X': 'rock', 'Y': 'paper', 
 SCORES = {'rock': 1, 'paper': 2, 'scissors': 3}
 WINNERS = {'rock': 'scissors', 'paper': 'rock', 'scissors': 'paper'}
 LOSERS = {'rock': 'paper', 'paper': 'scissors', 'scissors': 'rock'}
-COLORS = {'rock': Style.DIM, 'paper': Style.BRIGHT, 'scissors': Style.DIM + Fore.YELLOW}
+COLORS = {'rock': Style.DIM, 'paper': Style.BRIGHT, 'scissors': Fore.MAGENTA}
 
 DRAW_BONUS = 3
 WIN_BONUS = 6
