@@ -13,6 +13,7 @@ RIGHT_MIDDLE = u'\u2524'
 MIDDLE = u'\u253c'
 BLOCK = u'\u2588'
 SQUARE = u'\u25aa'
+CLEAR_SCREEN = '\033[H\033[J'
 
 def draw_line(length: int):
     print(HORIZONTAL*length, end='')
