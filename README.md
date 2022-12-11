@@ -40,6 +40,12 @@ Solution: [tuning.py](6/tuning.py)
 
 ## Day 7: [No Space Left On Device](https://adventofcode.com/2022/day/7)
 
-Solution: [filesystem.py](7/calories.py)
+Solution: [filesystem.py](7/filesystem.py)
 
 ![Day 7 Screenshot](screenshots/7.png)
+
+## Day 8: [Treetop Tree House](https://adventofcode.com/2022/day/8)
+
+Solution: [trees.py](8/trees.py)
+
+![Day 8 Screenshot](screenshots/8.png)
