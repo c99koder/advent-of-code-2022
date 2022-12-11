@@ -49,3 +49,15 @@ Solution: [filesystem.py](7/filesystem.py)
 Solution: [trees.py](8/trees.py)
 
 ![Day 8 Screenshot](screenshots/8.png)
+
+## Day 9: [Rope Bridge](https://adventofcode.com/2022/day/9)
+
+Solution (part 1): [rope.py](9/rope.py)
+
+![Day 9 Screenshot](screenshots/9.png)
+
+## Day 10: [Cathode-Ray Tube](https://adventofcode.com/2022/day/10)
+
+Solution: [crt.py](10/crt.py)
+
+![Day 10 Screenshot](screenshots/10.png)

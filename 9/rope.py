@@ -3,11 +3,11 @@ import sys
 sys.path.append("../")
 from utils import *
 
-MAX = 20
+MAX = 6
 KNOTS = 2
 
-knots_x = [int(MAX/2)] * KNOTS
-knots_y = [int(MAX/2)] * KNOTS
+knots_x = [0] * KNOTS
+knots_y = [MAX - 1] * KNOTS
 part1_visited = [False]*(MAX*MAX)
 part1 = 0
 
