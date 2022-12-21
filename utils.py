@@ -14,6 +14,11 @@ MIDDLE = u'\u253c'
 BLOCK = u'\u2588'
 SQUARE = u'\u25aa'
 CLEAR_SCREEN = '\033[H\033[J'
+ARROW_RIGHT = '\u2192'
+ARROW_LEFT = '\u2190'
+ARROW_DOWN = '\u2193'
+ARROW_UP = '\u2191'
+DIAMOND = '\u2b29'
 
 def draw_line(length: int):
     print(HORIZONTAL*length, end='')
