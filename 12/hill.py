@@ -26,6 +26,7 @@ def get_cell(pos):
 def add_point(a,b):
     return [a[0] + b[0], a[1] + b[1]]
 
+# Python implementation of Dijkstra's Algorithm from https://github.com/mortoray/path-finding
 def shortest(start):
     visited = set()
 
